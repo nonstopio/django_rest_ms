@@ -21,10 +21,10 @@ Microservices - also known as the microservice architecture - is an architectura
 ## Populate data!
 It is important to populate the data before understanding the scenarios. Goto respective urls and populate the data using Django REST Framework Interface.
 
-In addition to your records, if you with to check with too many players, call the api `<player ms url>/fake_200_players/`.
+In addition to your records, if you wish to check with too many players, call the api `<player ms url>/fake_200_players/`.
 
 ## Scenarios
-This application has mainly three modules Team, Player and Match which are converted to MS. All modules are related to each other like, a team has list of players, every player has a team assigned to him/her, every match has two teams.
+This application has mainly three modules Team, Player and Match where every module is an MS. All modules are related to each other like, a team has list of players, every player has a team assigned to him/her, every match has two teams.
 
 - *Get team details*
   - API: `<team ms url>/get_team_details/<team_id>`
