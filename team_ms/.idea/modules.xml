@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../match_ms/.idea/match_ms.iml" filepath="$PROJECT_DIR$/../match_ms/.idea/match_ms.iml" />
       <module fileurl="file://$PROJECT_DIR$/../player_ms/.idea/player_ms.iml" filepath="$PROJECT_DIR$/../player_ms/.idea/player_ms.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/team_ms.iml" filepath="$PROJECT_DIR$/.idea/team_ms.iml" />
     </modules>

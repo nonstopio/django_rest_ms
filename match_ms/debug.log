@@ -1,0 +1,19 @@
+2018-06-26 11:42:42,158 [Thread-1    ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5171
+2018-06-26 11:42:42,228 [Thread-4    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2018-06-26 11:42:42,232 [Thread-5    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2018-06-26 11:42:42,233 [Thread-6    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+2018-06-26 11:42:42,242 [Thread-8    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2018-06-26 11:42:42,246 [Thread-3    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-06-26 11:42:42,255 [Thread-9    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+2018-06-26 11:42:42,290 [Thread-12   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+2018-06-26 11:42:42,291 [Thread-7    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+2018-06-26 11:42:42,296 [Thread-10   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-06-26 11:42:42,310 [Thread-11   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2018-06-26 11:42:42,340 [Thread-13   ] [INFO ] [django.server       ]  "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2018-06-26 11:42:42,777 [Thread-14   ] [WARNI] [django.request      ]  Not Found: /favicon.ico
+2018-06-26 11:42:42,778 [Thread-14   ] [WARNI] [django.server       ]  "GET /favicon.ico HTTP/1.1" 404 3273
+2018-06-26 11:42:43,746 [Thread-15   ] [INFO ] [django.server       ]  "GET /match/ HTTP/1.1" 200 9186
+2018-06-26 11:43:17,256 [Thread-16   ] [INFO ] [django.server       ]  "POST /match/ HTTP/1.1" 201 9424
+2018-06-26 11:43:44,178 [Thread-17   ] [INFO ] [django.server       ]  "POST /match/ HTTP/1.1" 201 9416
+2018-06-26 11:44:17,996 [Thread-18   ] [INFO ] [django.server       ]  "POST /match/ HTTP/1.1" 201 9422
+2018-06-26 11:44:19,883 [Thread-19   ] [INFO ] [django.server       ]  "GET /match/ HTTP/1.1" 200 9865

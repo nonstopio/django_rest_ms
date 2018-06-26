@@ -5,6 +5,7 @@
     <orderEntry type="jdk" jdkName="Python 3.6 (env_worldcup) (1)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="player_ms" />
+    <orderEntry type="module" module-name="match_ms" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />
