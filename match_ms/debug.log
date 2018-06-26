@@ -518,3 +518,8 @@ urllib.error.HTTPError: HTTP Error 500: Internal Server Error
 2018-06-26 14:56:20,783 [Thread-24   ] [INFO ] [django.server       ]  "GET /match/ HTTP/1.1" 200 9865
 2018-06-26 14:56:26,854 [Thread-25   ] [INFO ] [django.server       ]  "GET /match/ HTTP/1.1" 200 9865
 2018-06-26 14:56:33,060 [Thread-30   ] [INFO ] [django.server       ]  "GET /match/ HTTP/1.1" 200 9865
+2018-06-26 15:31:35,725 [Thread-1    ] [INFO ] [django.server       ]  "GET /match/ HTTP/1.1" 200 9865
+2018-06-26 15:31:37,736 [Thread-3    ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5171
+2018-06-26 16:00:49,626 [Thread-9    ] [INFO ] [django.server       ]  "GET /match/ HTTP/1.1" 200 9865
+2018-06-26 16:00:52,001 [Thread-10   ] [INFO ] [django.server       ]  "GET /get_all_match/ HTTP/1.1" 200 7416
+2018-06-26 16:01:50,089 [Thread-16   ] [INFO ] [django.server       ]  "GET /get_all_match/ HTTP/1.1" 200 7416

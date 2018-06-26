@@ -27,7 +27,7 @@ def get_players(req):
     for one_player in players:
         team_id_list.append(one_player['team_id'])
 
-    data = parse.urlencode({'team_ids': team_id_list}).encode('utf-8')
+    data = parse.urlencode({'team_ids': json.dumps(team_id_list)}).encode('utf-8')
 
     team_data_list = json.loads(
         request.urlopen(MSUrls.team + 'get_player_team/', data=data).read()

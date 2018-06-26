@@ -1213,3 +1213,9 @@ json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes:
 2018-06-26 14:56:22,837 [Thread-3    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
 2018-06-26 14:56:22,864 [Thread-4    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
 2018-06-26 14:56:28,790 [Thread-5    ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5168
+2018-06-26 15:27:21,480 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 200 84935
+2018-06-26 15:31:09,160 [Thread-3    ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5168
+2018-06-26 16:00:01,905 [Thread-4    ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5168
+2018-06-26 16:00:51,990 [Thread-10   ] [INFO ] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 200 605
+2018-06-26 16:01:50,078 [Thread-11   ] [INFO ] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 200 605
+2018-06-26 16:02:23,653 [Thread-12   ] [INFO ] [django.server       ]  "POST /get_player_team/ HTTP/1.1" 200 91645

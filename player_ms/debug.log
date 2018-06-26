@@ -1415,3 +1415,7 @@ urllib.error.URLError: <urlopen error [Errno 61] Connection refused>
 2018-06-26 14:36:10,453 [Thread-14   ] [WARNI] [django.server       ]  "GET /favicon.ico HTTP/1.1" 404 3719
 2018-06-26 14:36:34,323 [Thread-15   ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5174
 2018-06-26 14:39:41,740 [Thread-21   ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5174
+2018-06-26 15:27:21,474 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_team_players/2/ HTTP/1.1" 200 84832
+2018-06-26 15:31:21,386 [Thread-3    ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5174
+2018-06-26 15:33:58,834 [Thread-5    ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5174
+2018-06-26 16:02:24,146 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_players/ HTTP/1.1" 200 523438
