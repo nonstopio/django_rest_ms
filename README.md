@@ -7,7 +7,10 @@ Microservices - also known as the microservice architecture - is an architectura
   Since this is an example of MS, we have build three different Django projects team_ms, player_ms and match_ms where each project is an MS. As per MS architecture the data in every MS should be loosely coupled and have their own database. So, to make communication among MS we have made api calls.
 
 ## How to configure?
-  - Run command `./zero_config.bash`
+  - Run below command:
+    - `git clone https://github.com/nonstopio/django_rest_ms.git`
+    - `cd django_rest_ms`
+    - `./zero_config.bash`
   - There you go. Everything is set. Refer following URLs for respective MS:
     - Team MS: http://127.0.0.1:7001/
     - Player MS: http://127.0.0.1:7002/
