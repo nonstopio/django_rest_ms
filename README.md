@@ -7,7 +7,7 @@ Microservices - also known as the microservice architecture - is an architectura
   Since this is an example of MS, we have build three different Django projects team_ms, player_ms and match_ms where each project is an MS. As per MS architecture the data in every MS should be loosely coupled and have their own database. So, to make communication among MS we have made api calls.
 
 ## How to configure?
-  - Run command `.zero_config.bash`
+  - Run command `./zero_config.bash`
   - There you go. Everything is set. Refer following URLs for respective MS:
     - Team MS: http://127.0.0.1:7001/
     - Player MS: http://127.0.0.1:7002/
@@ -19,7 +19,7 @@ Microservices - also known as the microservice architecture - is an architectura
 This application has mainly three modules Team, Player and Match where every module is an MS. All modules are related to each other like, a team has list of players, every player has a team assigned to him/her, every match has two teams.
 
 - *Get team details*
-  - API: http://127.0.0.1:7001//get_team_details/2
+  - API: http://127.0.0.1:7001/get_team_details/2/
   - This api fetches the details about the team and list of players in that team. But, players' data reside in Player MS. So api for list of players is called `http://127.0.0.1:7002/get_team_players/1/`
   
 - *Get all players*
