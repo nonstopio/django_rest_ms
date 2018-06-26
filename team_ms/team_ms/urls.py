@@ -13,6 +13,8 @@ router.register('team', viewset=TeamViewSet)
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^admin/', admin.site.urls),
-    url('get_team_list', view=views.get_team_list, name='get_team_list'),
-    url('get_team_details/(?P<pk>[^/.]+)/$', view=views.get_team_details, name='get_team_details')
+    url('get_player_team', view=views.get_player_team, name='get_player_team'),
+    url('get_team_details/(?P<pk>[^/.]+)/$', view=views.get_team_details, name='get_team_details'),
+    url('get_match_team/', view=views.get_match_team, name='get_match_team')
 ] + static.static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

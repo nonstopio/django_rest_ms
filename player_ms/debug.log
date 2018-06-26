@@ -1391,3 +1391,9 @@ urllib.error.URLError: <urlopen error [Errno 61] Connection refused>
 2018-06-26 11:28:00,798 [Thread-15   ] [INFO ] [django.server       ]  "GET /get_team_players/2/ HTTP/1.1" 200 70540
 2018-06-26 11:28:13,215 [Thread-16   ] [INFO ] [django.server       ]  "GET /get_players/1/ HTTP/1.1" 200 154300
 2018-06-26 11:28:18,546 [Thread-17   ] [INFO ] [django.server       ]  "GET /get_players/ HTTP/1.1" 200 154300
+2018-06-26 11:54:01,747 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_team_players/2/ HTTP/1.1" 200 70540
+2018-06-26 11:54:44,943 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_players/ HTTP/1.1" 200 154300
+2018-06-26 12:09:11,699 [Thread-1    ] [WARNI] [django.request      ]  Not Found: /get_all_match
+2018-06-26 12:09:11,700 [Thread-1    ] [WARNI] [django.server       ]  "GET /get_all_match HTTP/1.1" 404 3725
+2018-06-26 12:09:13,938 [Thread-3    ] [WARNI] [django.request      ]  Not Found: /get_all_match/
+2018-06-26 12:09:13,939 [Thread-3    ] [WARNI] [django.server       ]  "GET /get_all_match/ HTTP/1.1" 404 3728

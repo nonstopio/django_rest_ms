@@ -30,7 +30,7 @@ def get_players(req):
     data = parse.urlencode({'team_ids': team_id_list}).encode('utf-8')
 
     team_data_list = json.loads(
-        request.urlopen(MSUrls.team + 'get_team_list/', data=data).read()
+        request.urlopen(MSUrls.team + 'get_player_team/', data=data).read()
     )
 
     count = 0

@@ -806,3 +806,360 @@ team_app.models.DoesNotExist: Team matching query does not exist.
 2018-06-26 11:28:00,802 [Thread-17   ] [INFO ] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 200 70643
 2018-06-26 11:28:13,207 [Thread-18   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 76445
 2018-06-26 11:28:18,537 [Thread-19   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 76445
+2018-06-26 11:53:22,847 [Thread-1    ] [ERROR] [django.request      ]  Internal Server Error: /get_player_team/2/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 20, in get_player_team
+    team_id_list = json.loads(req.data['team_ids'])
+KeyError: 'team_ids'
+2018-06-26 11:53:22,996 [Thread-1    ] [ERROR] [django.server       ]  "GET /get_player_team/2/ HTTP/1.1" 500 15484
+2018-06-26 11:53:58,532 [Thread-3    ] [WARNI] [django.server       ]  "POST /get_team_details/2/ HTTP/1.1" 405 41
+2018-06-26 11:54:01,752 [Thread-4    ] [INFO ] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 200 70643
+2018-06-26 11:54:44,934 [Thread-5    ] [INFO ] [django.server       ]  "POST /get_player_team/ HTTP/1.1" 200 76445
+2018-06-26 12:15:18,294 [Thread-1    ] [WARNI] [django.request      ]  Not Found: /get_match_team/
+2018-06-26 12:15:18,295 [Thread-1    ] [WARNI] [django.server       ]  "GET /get_match_team/ HTTP/1.1" 404 3579
+2018-06-26 12:16:03,281 [Thread-1    ] [WARNI] [django.server       ]  "GET /get_match_team/ HTTP/1.1" 405 40
+2018-06-26 12:16:06,903 [Thread-3    ] [ERROR] [django.request      ]  Internal Server Error: /get_match_team/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 57, in get_match_team
+    team_id_list = json.loads(req.data['team_ids'])
+KeyError: 'team_ids'
+2018-06-26 12:16:06,958 [Thread-3    ] [ERROR] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 500 15474
+2018-06-26 12:17:12,185 [Thread-1    ] [ERROR] [django.request      ]  Internal Server Error: /get_match_team/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 57, in get_match_team
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 3 column 9 (char 16)
+2018-06-26 12:17:12,285 [Thread-1    ] [ERROR] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 500 16404
+2018-06-26 12:17:53,524 [Thread-1    ] [INFO ] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 200 605
+2018-06-26 12:21:30,798 [Thread-1    ] [ERROR] [django.request      ]  Internal Server Error: /get_match_team/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 57, in get_match_team
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+2018-06-26 12:21:30,841 [Thread-1    ] [ERROR] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 500 16137
+2018-06-26 12:21:40,941 [Thread-3    ] [ERROR] [django.request      ]  Internal Server Error: /get_match_team/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 57, in get_match_team
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+2018-06-26 12:21:40,963 [Thread-3    ] [ERROR] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 500 16137
+2018-06-26 12:22:12,456 [Thread-4    ] [INFO ] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 200 605
+2018-06-26 12:23:03,512 [Thread-5    ] [ERROR] [django.request      ]  Internal Server Error: /get_match_team/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 57, in get_match_team
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+2018-06-26 12:23:03,528 [Thread-5    ] [ERROR] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 500 16137
+2018-06-26 12:23:50,886 [Thread-6    ] [ERROR] [django.request      ]  Internal Server Error: /get_match_team/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 57, in get_match_team
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+2018-06-26 12:23:50,902 [Thread-6    ] [ERROR] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 500 16137
+2018-06-26 12:24:26,697 [Thread-1    ] [ERROR] [django.request      ]  Internal Server Error: /get_match_team/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 57, in get_match_team
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+2018-06-26 12:24:26,747 [Thread-1    ] [ERROR] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 500 16137
+2018-06-26 12:25:15,230 [Thread-3    ] [ERROR] [django.request      ]  Internal Server Error: /get_match_team/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 57, in get_match_team
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+2018-06-26 12:25:15,243 [Thread-3    ] [ERROR] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 500 16137
+2018-06-26 12:25:25,478 [Thread-4    ] [ERROR] [django.request      ]  Internal Server Error: /get_match_team/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 57, in get_match_team
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+2018-06-26 12:25:25,498 [Thread-4    ] [ERROR] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 500 16137
+2018-06-26 12:27:43,912 [Thread-5    ] [ERROR] [django.request      ]  Internal Server Error: /get_match_team/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 57, in get_match_team
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+2018-06-26 12:27:43,942 [Thread-5    ] [ERROR] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 500 16137
+2018-06-26 12:28:30,154 [Thread-6    ] [ERROR] [django.request      ]  Internal Server Error: /get_match_team/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 57, in get_match_team
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+2018-06-26 12:28:30,168 [Thread-6    ] [ERROR] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 500 16137
+2018-06-26 12:28:43,463 [Thread-7    ] [INFO ] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 200 605

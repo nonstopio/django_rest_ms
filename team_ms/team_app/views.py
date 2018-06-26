@@ -16,7 +16,7 @@ class TeamViewSet(viewsets.ModelViewSet):
 
 
 @api_view(['GET', 'POST'])
-def get_team_list(req):
+def get_player_team(req):
     team_id_list = json.loads(req.data['team_ids'])
 
     team_list = []
@@ -50,3 +50,20 @@ def get_team_details(req, pk):
     return Response({
         'team_details': current_team,
     })
+
+
+@api_view(['POST'])
+def get_match_team(req):
+    team_id_list = json.loads(req.data['team_ids'])
+
+    print('team_id_list: ')
+    print(team_id_list)
+
+    team_list = []
+    for one_id in team_id_list:
+        team_list.append({
+            'team_a': TeamSerializer(Team.objects.get(id=one_id['team_a']), many=False).data,
+            'team_b': TeamSerializer(Team.objects.get(id=one_id['team_b']), many=False).data
+        })
+
+    return Response(team_list)
