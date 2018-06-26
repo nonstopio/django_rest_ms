@@ -488,3 +488,4 @@ Traceback (most recent call last):
 urllib.error.HTTPError: HTTP Error 500: Internal Server Error
 2018-06-26 12:28:30,211 [Thread-1    ] [ERROR] [django.server       ]  "GET /get_all_match/ HTTP/1.1" 500 16403
 2018-06-26 12:28:43,464 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_all_match/ HTTP/1.1" 200 888
+2018-06-26 12:45:52,901 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_all_match HTTP/1.1" 200 7410

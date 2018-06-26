@@ -10,3 +10,13 @@ class Player(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class PlayerGoal(models.Model):
+    id = models.AutoField(primary_key=True)
+    player = models.ForeignKey(Player, on_delete=models.CASCADE)
+    match_id = models.IntegerField()
+    time = models.TimeField()
+
+    def __str__(self):
+        return '%s' % self.id

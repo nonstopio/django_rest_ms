@@ -14,6 +14,6 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^admin/', admin.site.urls),
     url('get_players', view=views.get_players, name='get_players'),
-    url('fake_100_players', view=views.fake_100_players, name='fake_100_players'),
+    url('fake_200_players', view=views.fake_200_players, name='fake_200_players'),
     url(r'^get_team_players/(?P<pk>[^/.]+)/$', view=views.get_team_players, name='get_team_players'),
 ] + static.static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

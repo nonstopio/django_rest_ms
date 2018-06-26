@@ -42,7 +42,7 @@ def get_players(req):
 
 
 @api_view(['GET'])
-def fake_100_players(req):
+def fake_200_players(req):
 
     count = 1
     while count < 201:
