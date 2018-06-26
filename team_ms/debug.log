@@ -1,0 +1,790 @@
+2018-06-25 15:06:26,061 [Thread-1    ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5168
+2018-06-25 15:06:26,092 [Thread-3    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2018-06-25 15:06:26,094 [Thread-7    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+2018-06-25 15:06:26,096 [Thread-5    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2018-06-25 15:06:26,096 [Thread-4    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2018-06-25 15:06:26,096 [Thread-6    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2018-06-25 15:06:26,097 [Thread-8    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2018-06-25 15:06:26,101 [Thread-9    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2018-06-25 15:06:26,103 [Thread-10   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2018-06-25 15:06:26,106 [Thread-11   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2018-06-25 15:06:26,107 [Thread-12   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2018-06-25 15:06:26,149 [Thread-13   ] [INFO ] [django.server       ]  "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2018-06-25 15:06:26,976 [Thread-14   ] [ERROR] [django.request      ]  Internal Server Error: /team/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: team_app_team
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/query.py", line 272, in __iter__
+    self._fetch_all()
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1068, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: team_app_team
+2018-06-25 15:06:27,218 [Thread-14   ] [ERROR] [django.server       ]  "GET /team/ HTTP/1.1" 500 156764
+2018-06-25 15:06:43,192 [Thread-15   ] [INFO ] [django.server       ]  "GET /team/ HTTP/1.1" 200 8829
+2018-06-25 15:07:01,336 [Thread-21   ] [INFO ] [django.server       ]  "POST /team/ HTTP/1.1" 201 9204
+2018-06-25 15:07:02,905 [Thread-22   ] [INFO ] [django.server       ]  "GET /media/argentinaflag_grande.gif HTTP/1.1" 200 8669
+2018-06-25 15:07:19,515 [Thread-23   ] [INFO ] [django.server       ]  "POST /team/ HTTP/1.1" 201 9150
+2018-06-25 15:07:38,129 [Thread-24   ] [DEBUG] [PIL.PngImagePlugin  ]  STREAM b'IHDR' 16 13
+2018-06-25 15:07:38,144 [Thread-24   ] [DEBUG] [PIL.PngImagePlugin  ]  STREAM b'gAMA' 41 4
+2018-06-25 15:07:38,144 [Thread-24   ] [DEBUG] [PIL.PngImagePlugin  ]  STREAM b'cHRM' 57 32
+2018-06-25 15:07:38,144 [Thread-24   ] [DEBUG] [PIL.PngImagePlugin  ]  STREAM b'bKGD' 101 6
+2018-06-25 15:07:38,144 [Thread-24   ] [DEBUG] [PIL.PngImagePlugin  ]  b'bKGD' 101 6 (unknown)
+2018-06-25 15:07:38,145 [Thread-24   ] [DEBUG] [PIL.PngImagePlugin  ]  STREAM b'tIME' 119 7
+2018-06-25 15:07:38,145 [Thread-24   ] [DEBUG] [PIL.PngImagePlugin  ]  b'tIME' 119 7 (unknown)
+2018-06-25 15:07:38,145 [Thread-24   ] [DEBUG] [PIL.PngImagePlugin  ]  STREAM b'IDAT' 138 9294
+2018-06-25 15:07:38,172 [Thread-24   ] [INFO ] [django.server       ]  "POST /team/ HTTP/1.1" 201 9218
+2018-06-25 15:07:41,522 [Thread-25   ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5168
+2018-06-25 15:07:42,457 [Thread-26   ] [INFO ] [django.server       ]  "GET /team/ HTTP/1.1" 200 9762
+2018-06-25 15:07:46,868 [Thread-27   ] [INFO ] [django.server       ]  "GET /team/3 HTTP/1.1" 301 0
+2018-06-25 15:07:46,900 [Thread-28   ] [INFO ] [django.server       ]  "GET /team/3/ HTTP/1.1" 200 10628
+2018-06-25 15:07:50,880 [Thread-29   ] [WARNI] [django.request      ]  Not Found: /team/3/name
+2018-06-25 15:07:50,881 [Thread-29   ] [WARNI] [django.server       ]  "GET /team/3/name HTTP/1.1" 404 3264
+2018-06-25 15:08:14,018 [Thread-35   ] [INFO ] [django.server       ]  "GET /team/ HTTP/1.1" 200 9762
+2018-06-25 15:08:24,535 [Thread-41   ] [INFO ] [django.server       ]  "GET /team?name=Argentina HTTP/1.1" 301 0
+2018-06-25 15:08:24,596 [Thread-42   ] [INFO ] [django.server       ]  "GET /team/?name=Argentina HTTP/1.1" 200 9875
+2018-06-25 15:08:32,551 [Thread-43   ] [INFO ] [django.server       ]  "GET /team/1?name=Argentina HTTP/1.1" 301 0
+2018-06-25 15:08:32,617 [Thread-44   ] [INFO ] [django.server       ]  "GET /team/1/?name=Argentina HTTP/1.1" 200 10738
+2018-06-25 15:08:37,238 [Thread-47   ] [INFO ] [django.server       ]  "GET /team/2/?name=Argentina HTTP/1.1" 200 10664
+2018-06-25 15:08:40,346 [Thread-48   ] [INFO ] [django.server       ]  "GET /team/?name=Argentina HTTP/1.1" 200 9875
+2018-06-25 15:08:42,763 [Thread-49   ] [INFO ] [django.server       ]  "GET /team/?name=Argentina HTTP/1.1" 200 9875
+2018-06-25 15:08:45,909 [Thread-50   ] [INFO ] [django.server       ]  "GET /team/asd HTTP/1.1" 301 0
+2018-06-25 15:08:45,938 [Thread-51   ] [WARNI] [django.request      ]  Not Found: /team/asd/
+2018-06-25 15:08:45,939 [Thread-51   ] [WARNI] [django.server       ]  "GET /team/asd/ HTTP/1.1" 404 10205
+2018-06-25 15:08:50,881 [Thread-54   ] [WARNI] [django.request      ]  Not Found: /team/1/5
+2018-06-25 15:08:50,901 [Thread-54   ] [WARNI] [django.server       ]  "GET /team/1/5 HTTP/1.1" 404 3255
+2018-06-25 15:09:01,215 [Thread-60   ] [INFO ] [django.server       ]  "GET /team/1 HTTP/1.1" 301 0
+2018-06-25 15:09:01,249 [Thread-61   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 10610
+2018-06-25 15:09:24,564 [Thread-64   ] [INFO ] [django.server       ]  "GET /team/ HTTP/1.1" 200 9762
+2018-06-25 15:09:25,131 [Thread-65   ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5168
+2018-06-25 15:09:26,933 [Thread-66   ] [INFO ] [django.server       ]  "GET /team/ HTTP/1.1" 200 9762
+2018-06-25 15:45:58,035 [Thread-1    ] [WARNI] [django.request      ]  Not Found: //team/2
+2018-06-25 15:45:58,074 [Thread-1    ] [WARNI] [django.server       ]  "GET //team/2 HTTP/1.1" 404 3252
+2018-06-25 15:46:19,088 [Thread-3    ] [INFO ] [django.server       ]  "GET /team/1 HTTP/1.1" 301 0
+2018-06-25 15:46:20,958 [Thread-4    ] [INFO ] [django.server       ]  "GET /team/1 HTTP/1.1" 301 0
+2018-06-25 15:46:48,201 [Thread-5    ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 10610
+2018-06-25 15:46:48,249 [Thread-6    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2018-06-25 15:46:48,250 [Thread-11   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2018-06-25 15:46:48,252 [Thread-10   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+2018-06-25 15:46:48,253 [Thread-8    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2018-06-25 15:46:48,255 [Thread-9    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2018-06-25 15:46:48,256 [Thread-7    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2018-06-25 15:46:48,259 [Thread-12   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2018-06-25 15:46:48,260 [Thread-13   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2018-06-25 15:46:48,265 [Thread-14   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2018-06-25 15:46:48,265 [Thread-15   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2018-06-25 15:46:48,314 [Thread-16   ] [INFO ] [django.server       ]  "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2018-06-25 15:49:42,557 [Thread-17   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 10610
+2018-06-25 15:49:59,246 [Thread-23   ] [INFO ] [django.server       ]  "GET /team/1 HTTP/1.1" 301 0
+2018-06-25 15:50:28,781 [Thread-24   ] [INFO ] [django.server       ]  "GET /team/1 HTTP/1.1" 301 0
+2018-06-25 15:50:41,474 [Thread-25   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:50:52,947 [Thread-26   ] [WARNI] [django.request      ]  Not Found: //team/2/
+2018-06-25 15:50:52,965 [Thread-26   ] [WARNI] [django.server       ]  "GET //team/2/ HTTP/1.1" 404 3255
+2018-06-25 15:51:20,823 [Thread-27   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:51:20,828 [Thread-28   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:51:20,834 [Thread-29   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:51:20,839 [Thread-30   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:51:20,844 [Thread-31   ] [INFO ] [django.server       ]  "GET /team/3/ HTTP/1.1" 200 120
+2018-06-25 15:53:04,368 [Thread-32   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:53:04,373 [Thread-33   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:53:04,377 [Thread-34   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:53:04,382 [Thread-35   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:53:04,388 [Thread-36   ] [INFO ] [django.server       ]  "GET /team/3/ HTTP/1.1" 200 120
+2018-06-25 15:53:42,396 [Thread-37   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:53:42,403 [Thread-38   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:53:42,408 [Thread-39   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:53:42,416 [Thread-40   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:53:42,421 [Thread-41   ] [INFO ] [django.server       ]  "GET /team/3/ HTTP/1.1" 200 120
+2018-06-25 15:56:21,798 [Thread-42   ] [INFO ] [django.server       ]  "GET /media/brazil.jpg HTTP/1.1" 200 21814
+2018-06-25 15:56:42,843 [Thread-43   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:42,847 [Thread-44   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:42,852 [Thread-45   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:42,859 [Thread-46   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:42,866 [Thread-47   ] [INFO ] [django.server       ]  "GET /team/3/ HTTP/1.1" 200 120
+2018-06-25 15:56:43,845 [Thread-48   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:43,851 [Thread-49   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:43,855 [Thread-50   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:43,860 [Thread-51   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:43,866 [Thread-52   ] [INFO ] [django.server       ]  "GET /team/3/ HTTP/1.1" 200 120
+2018-06-25 15:56:44,668 [Thread-53   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:44,675 [Thread-54   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:44,680 [Thread-55   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:44,687 [Thread-56   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:44,691 [Thread-57   ] [INFO ] [django.server       ]  "GET /team/3/ HTTP/1.1" 200 120
+2018-06-25 15:56:45,416 [Thread-58   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:45,421 [Thread-59   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:45,425 [Thread-60   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:45,430 [Thread-61   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:45,437 [Thread-62   ] [INFO ] [django.server       ]  "GET /team/3/ HTTP/1.1" 200 120
+2018-06-25 15:56:45,976 [Thread-63   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:45,981 [Thread-64   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:45,986 [Thread-65   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:45,990 [Thread-66   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:45,994 [Thread-67   ] [INFO ] [django.server       ]  "GET /team/3/ HTTP/1.1" 200 120
+2018-06-25 15:56:46,424 [Thread-68   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:46,430 [Thread-69   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:46,435 [Thread-70   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:46,440 [Thread-71   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:46,444 [Thread-72   ] [INFO ] [django.server       ]  "GET /team/3/ HTTP/1.1" 200 120
+2018-06-25 15:56:48,882 [Thread-73   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:48,889 [Thread-74   ] [INFO ] [django.server       ]  "GET /team/2/ HTTP/1.1" 200 96
+2018-06-25 15:56:48,894 [Thread-75   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:48,900 [Thread-76   ] [INFO ] [django.server       ]  "GET /team/1/ HTTP/1.1" 200 116
+2018-06-25 15:56:48,906 [Thread-77   ] [INFO ] [django.server       ]  "GET /team/3/ HTTP/1.1" 200 120
+2018-06-25 16:16:45,313 [Thread-1    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'team_ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 16, in get_team_list
+    team_id_list = req.data['team_ids']
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'team_ids'
+2018-06-25 16:16:45,545 [Thread-1    ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 15648
+2018-06-25 16:18:05,333 [Thread-3    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'team_ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 16, in get_team_list
+    team_id_list = req.data['team_ids']
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'team_ids'
+2018-06-25 16:18:05,455 [Thread-3    ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 15648
+2018-06-25 16:20:01,621 [Thread-1    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'team_ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 17, in get_team_list
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'team_ids'
+2018-06-25 16:20:01,844 [Thread-1    ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 15660
+2018-06-25 16:20:34,713 [Thread-1    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'team_ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 17, in get_team_list
+    team_id_list = req.data['team_ids']
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'team_ids'
+2018-06-25 16:20:34,773 [Thread-1    ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 15648
+2018-06-25 16:23:26,060 [Thread-1    ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 2
+2018-06-25 16:23:51,050 [Thread-3    ] [INFO ] [django.server       ]  "GET /get_team_list/ HTTP/1.1" 200 2
+2018-06-25 16:23:58,658 [Thread-4    ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 2
+2018-06-25 16:24:24,437 [Thread-5    ] [INFO ] [django.server       ]  "GET /get_team_list/ HTTP/1.1" 200 2
+2018-06-25 16:25:28,739 [Thread-1    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'team_ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 17, in get_team_list
+    team_id_list = req.data['team_ids']
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'team_ids'
+2018-06-25 16:25:28,969 [Thread-1    ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 15648
+2018-06-25 16:25:48,731 [Thread-3    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 22, in get_team_list
+    TeamSerializer(Team.objects.get(id=one_id), many=False).data
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '['
+2018-06-25 16:25:48,889 [Thread-3    ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 17608
+2018-06-25 16:26:32,193 [Thread-1    ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 273
+2018-06-25 16:26:43,990 [Thread-3    ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 197
+2018-06-25 16:27:02,867 [Thread-4    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'team_ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 17, in get_team_list
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'team_ids'
+2018-06-25 16:27:03,093 [Thread-4    ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 15660
+2018-06-25 16:27:30,137 [Thread-5    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'team_ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 17, in get_team_list
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'team_ids'
+2018-06-25 16:27:30,149 [Thread-5    ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 15660
+2018-06-25 16:27:39,816 [Thread-6    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'team_ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 17, in get_team_list
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'team_ids'
+2018-06-25 16:27:39,837 [Thread-6    ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 15660
+2018-06-25 16:28:37,281 [Thread-7    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'team_ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 17, in get_team_list
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'team_ids'
+2018-06-25 16:28:37,435 [Thread-7    ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 15660
+2018-06-25 16:29:15,182 [Thread-8    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'team_ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 17, in get_team_list
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'team_ids'
+2018-06-25 16:29:15,426 [Thread-8    ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 15660
+2018-06-25 16:29:41,972 [Thread-9    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'team_ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 17, in get_team_list
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'team_ids'
+2018-06-25 16:29:41,999 [Thread-9    ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 15660
+2018-06-25 16:29:42,025 [Thread-9    ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 59
+2018-06-25 16:30:44,833 [Thread-10   ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'team_ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 17, in get_team_list
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'team_ids'
+2018-06-25 16:30:44,876 [Thread-10   ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 15660
+2018-06-25 16:31:41,562 [Thread-11   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 197
+2018-06-25 16:32:05,455 [Thread-12   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 197
+2018-06-25 16:32:06,074 [Thread-13   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 197
+2018-06-25 16:32:06,585 [Thread-14   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 197
+2018-06-25 16:32:07,126 [Thread-15   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 197
+2018-06-25 16:32:07,797 [Thread-16   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 197
+2018-06-25 16:32:08,739 [Thread-17   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 197
+2018-06-25 16:34:24,660 [Thread-18   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 445
+2018-06-25 16:44:33,217 [Thread-19   ] [ERROR] [django.request      ]  Internal Server Error: /get_team_list/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'team_ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 17, in get_team_list
+    team_id_list = json.loads(req.data['team_ids'])
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'team_ids'
+2018-06-25 16:44:33,335 [Thread-19   ] [ERROR] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 500 15660
+2018-06-25 16:46:25,946 [Thread-20   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 445
+2018-06-25 16:46:33,028 [Thread-21   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 445
+2018-06-25 16:46:34,766 [Thread-22   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 445
+2018-06-25 16:46:35,553 [Thread-23   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 445
+2018-06-25 16:46:36,237 [Thread-24   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 445
+2018-06-25 16:46:36,927 [Thread-25   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 445
+2018-06-25 16:46:37,745 [Thread-26   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 445
+2018-06-25 16:46:38,429 [Thread-27   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 445
+2018-06-25 16:46:48,601 [Thread-28   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 445
+2018-06-25 16:47:11,605 [Thread-29   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 445
+2018-06-25 16:47:17,743 [Thread-30   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 445
+2018-06-25 16:54:17,875 [Thread-31   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 15645
+2018-06-25 16:54:24,442 [Thread-32   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 15645
+2018-06-25 16:54:25,582 [Thread-33   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 15645
+2018-06-25 16:54:27,451 [Thread-34   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 15645
+2018-06-25 16:54:53,192 [Thread-35   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 197
+2018-06-25 16:54:58,146 [Thread-36   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 61245
+2018-06-25 16:55:02,980 [Thread-37   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 61245
+2018-06-25 16:55:11,846 [Thread-38   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 61245
+2018-06-25 16:55:33,116 [Thread-39   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 61245
+2018-06-25 16:57:50,415 [Thread-40   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 61245
+2018-06-25 16:57:54,215 [Thread-41   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 61245
+2018-06-25 16:59:48,641 [Thread-42   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 61245
+2018-06-25 16:59:52,053 [Thread-43   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 61245
+2018-06-25 17:04:15,783 [Thread-44   ] [ERROR] [django.request      ]  Internal Server Error: /team/7
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/middleware/common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/middleware/common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:7001/team/7/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-06-25 17:04:15,893 [Thread-44   ] [ERROR] [django.server       ]  "POST /team/7 HTTP/1.1" 500 61412
+2018-06-25 17:04:17,956 [Thread-45   ] [WARNI] [django.server       ]  "POST /team/7/ HTTP/1.1" 405 41
+2018-06-25 17:04:23,224 [Thread-46   ] [WARNI] [django.request      ]  Not Found: /team/7/
+2018-06-25 17:04:23,225 [Thread-46   ] [WARNI] [django.server       ]  "GET /team/7/ HTTP/1.1" 404 23
+2018-06-25 17:25:14,275 [Thread-47   ] [INFO ] [django.server       ]  "GET /team/ HTTP/1.1" 200 9762
+2018-06-25 17:25:14,299 [Thread-48   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2018-06-25 17:25:14,304 [Thread-49   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2018-06-25 17:25:14,310 [Thread-50   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2018-06-25 17:25:14,313 [Thread-51   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2018-06-25 17:25:14,314 [Thread-52   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+2018-06-25 17:25:14,315 [Thread-53   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2018-06-25 17:25:14,318 [Thread-54   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2018-06-25 17:25:14,322 [Thread-55   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2018-06-25 17:25:14,323 [Thread-56   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2018-06-25 17:25:14,323 [Thread-57   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2018-06-25 17:25:14,368 [Thread-58   ] [INFO ] [django.server       ]  "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2018-06-25 17:25:38,388 [Thread-59   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 61245
+2018-06-25 17:25:44,528 [Thread-60   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 61245
+2018-06-25 17:26:53,346 [Thread-61   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 76445
+2018-06-25 17:27:10,516 [Thread-62   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 76445
+2018-06-25 17:27:21,620 [Thread-63   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 76445
+2018-06-25 17:27:26,327 [Thread-64   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 76445
+2018-06-25 17:28:06,613 [Thread-65   ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 76445
+2018-06-25 17:42:18,616 [Thread-1    ] [WARNI] [django.request      ]  Not Found: /get_team_details/1
+2018-06-25 17:42:18,616 [Thread-1    ] [WARNI] [django.server       ]  "GET /get_team_details/1 HTTP/1.1" 404 3420
+2018-06-25 17:42:52,944 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_team_details/1 HTTP/1.1" 301 0
+2018-06-25 17:43:00,450 [Thread-3    ] [INFO ] [django.server       ]  "GET /get_team_details/1 HTTP/1.1" 301 0
+2018-06-25 17:43:02,604 [Thread-4    ] [INFO ] [django.server       ]  "GET /get_team_details/1/ HTTP/1.1" 200 330
+2018-06-25 17:43:37,838 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_team_details/1/ HTTP/1.1" 200 300
+2018-06-25 17:44:22,733 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_team_details/1/ HTTP/1.1" 200 300
+2018-06-25 17:44:37,997 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_team_details/1/ HTTP/1.1" 200 307
+2018-06-25 17:44:52,850 [Thread-3    ] [INFO ] [django.server       ]  "GET /get_team_details/3/ HTTP/1.1" 200 224
+2018-06-25 17:44:55,663 [Thread-4    ] [INFO ] [django.server       ]  "GET /get_team_details/1/ HTTP/1.1" 200 307
+2018-06-25 17:44:58,110 [Thread-5    ] [INFO ] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 200 70642
+2018-06-25 17:46:25,291 [Thread-6    ] [INFO ] [django.server       ]  "POST /get_team_list/ HTTP/1.1" 200 76445
+2018-06-25 17:47:00,591 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 200 70643
+2018-06-25 17:47:08,801 [Thread-3    ] [INFO ] [django.server       ]  "GET /get_team_details/1/ HTTP/1.1" 200 308
+2018-06-25 17:47:13,147 [Thread-4    ] [INFO ] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 200 70643
+2018-06-25 17:47:17,441 [Thread-5    ] [INFO ] [django.server       ]  "GET /get_team_details/3/ HTTP/1.1" 200 225
+2018-06-25 17:47:30,754 [Thread-6    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_details/0/
+Traceback (most recent call last):
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/team_ms/team_app/views.py", line 34, in get_team_details
+    Team.objects.get(id=pk),
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/nonstopio/workspace/microservices/worldcup/env_worldcup/lib/python3.6/site-packages/django/db/models/query.py", line 403, in get
+    self.model._meta.object_name
+team_app.models.DoesNotExist: Team matching query does not exist.
+2018-06-25 17:47:30,914 [Thread-6    ] [ERROR] [django.server       ]  "GET /get_team_details/0/ HTTP/1.1" 500 15817
+2018-06-25 17:50:08,096 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_team_details/0/ HTTP/1.1" 200 32
+2018-06-25 17:50:11,939 [Thread-3    ] [INFO ] [django.server       ]  "GET /get_team_details/1/ HTTP/1.1" 200 308
+2018-06-25 17:50:14,603 [Thread-4    ] [INFO ] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 200 70643
+2018-06-25 17:50:18,230 [Thread-5    ] [INFO ] [django.server       ]  "GET /get_team_details/5/ HTTP/1.1" 200 32
+2018-06-25 17:50:41,791 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_team_details/5/ HTTP/1.1" 200 36
+2018-06-25 17:50:44,760 [Thread-3    ] [INFO ] [django.server       ]  "GET /get_team_details/5/ HTTP/1.1" 200 36
+2018-06-25 17:51:15,176 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_team_details/5/ HTTP/1.1" 200 26
+2018-06-25 17:51:52,939 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_team_details/5/ HTTP/1.1" 204 26
+2018-06-25 17:52:14,126 [Thread-1    ] [INFO ] [django.server       ]  "GET /get_team_details/5/ HTTP/1.1" 204 29
+2018-06-25 17:52:18,923 [Thread-3    ] [INFO ] [django.server       ]  "GET /get_team_details/1/ HTTP/1.1" 200 308
+2018-06-25 17:52:22,774 [Thread-4    ] [INFO ] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 200 70643
+2018-06-25 17:52:25,866 [Thread-5    ] [INFO ] [django.server       ]  "GET /get_team_details/3/ HTTP/1.1" 200 225
+2018-06-25 17:52:29,231 [Thread-6    ] [INFO ] [django.server       ]  "GET /get_team_details/8/ HTTP/1.1" 204 29
+2018-06-25 17:54:49,053 [Thread-7    ] [INFO ] [django.server       ]  "GET /get_team_details/1/ HTTP/1.1" 200 308
+2018-06-25 17:54:53,937 [Thread-8    ] [INFO ] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 200 70643
+2018-06-25 18:00:57,536 [Thread-9    ] [INFO ] [django.server       ]  "GET /get_team_details/1 HTTP/1.1" 301 0
+2018-06-25 18:01:01,566 [Thread-10   ] [INFO ] [django.server       ]  "GET /get_team_details/1/ HTTP/1.1" 200 308
