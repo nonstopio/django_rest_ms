@@ -1399,3 +1399,19 @@ urllib.error.URLError: <urlopen error [Errno 61] Connection refused>
 2018-06-26 12:09:13,939 [Thread-3    ] [WARNI] [django.server       ]  "GET /get_all_match/ HTTP/1.1" 404 3728
 2018-06-26 13:14:00,361 [Thread-1    ] [INFO ] [django.server       ]  "GET /fake_200_players/ HTTP/1.1" 200 7
 2018-06-26 13:16:09,007 [Thread-3    ] [INFO ] [django.server       ]  "GET /get_team_players/2/ HTTP/1.1" 200 84832
+2018-06-26 14:36:09,978 [Thread-1    ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5174
+2018-06-26 14:36:10,015 [Thread-3    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2018-06-26 14:36:10,016 [Thread-6    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2018-06-26 14:36:10,017 [Thread-5    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2018-06-26 14:36:10,018 [Thread-4    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+2018-06-26 14:36:10,039 [Thread-7    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2018-06-26 14:36:10,041 [Thread-8    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2018-06-26 14:36:10,042 [Thread-9    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2018-06-26 14:36:10,043 [Thread-10   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2018-06-26 14:36:10,045 [Thread-11   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2018-06-26 14:36:10,045 [Thread-12   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2018-06-26 14:36:10,216 [Thread-13   ] [INFO ] [django.server       ]  "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2018-06-26 14:36:10,453 [Thread-14   ] [WARNI] [django.request      ]  Not Found: /favicon.ico
+2018-06-26 14:36:10,453 [Thread-14   ] [WARNI] [django.server       ]  "GET /favicon.ico HTTP/1.1" 404 3719
+2018-06-26 14:36:34,323 [Thread-15   ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5174
+2018-06-26 14:39:41,740 [Thread-21   ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5174
