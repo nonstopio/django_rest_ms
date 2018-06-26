@@ -8,10 +8,25 @@ Microservices - also known as the microservice architecture - is an architectura
 
 ## How to configure?
 - Create virtual environment with pyhton3 in the root dir of the repo: `virtualenv env_worldcup -p python3`
+- Dive into environment: `source env_worldcup/bin/activate`
 - Install requirements: `pip install requirements.txt`
 - Do database migrations, since, we have 3 projects go in every project and migrate the data as follows:
   - `python manage.py makemigrations`
   - `python manage.py migrate`
 
 ## How to run?
-Since, it is MS, run the projects seperately on different ports. Again go in every project and run the command `python manage.py runserver 127.0.0.1:<your port number>`
+- Since, it is MS, run the projects seperately on different ports. Again go in every project and run the command `python manage.py runserver 127.0.0.1:<your port number>`
+- Every MS has a file `common.py`, for example Player MS has it in `player_ms/player_app/services/common.py`. Change the URLs accordingly
+
+## Populate data!
+It is important to populate the data before understanding the scenarios. Goto respective urls and populate the data using Django REST Framework Interface.
+
+In addition to your records, if you with to check with too many players, call the api `<player ms url>/fake_200_players/`.
+
+## Scenarios
+This application has mainly three modules Team, Player and Match which are converted to MS. All modules are related to each other like, a team has list of players, every player has a team assigned to him/her, every match has two teams.
+
+- *Get Team details*
+  - API: `<team ms url>/get_team_details/<team_id>`
+  - This api fetches the details about the team and list of players in that team. But, players' data reside in Player MS. So api for list of players is called `<player ms url>/get_team_players/<team id>/`
+  
