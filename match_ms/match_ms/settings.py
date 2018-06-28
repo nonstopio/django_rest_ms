@@ -25,7 +25,7 @@ SECRET_KEY = 'e_*l-cpv_b*!cbb(mw!lw!7-_$lv_p9n1&0k_=p1!%ps8p#^c8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

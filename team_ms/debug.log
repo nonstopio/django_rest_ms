@@ -1219,3 +1219,442 @@ json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes:
 2018-06-26 16:00:51,990 [Thread-10   ] [INFO ] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 200 605
 2018-06-26 16:01:50,078 [Thread-11   ] [INFO ] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 200 605
 2018-06-26 16:02:23,653 [Thread-12   ] [INFO ] [django.server       ]  "POST /get_player_team/ HTTP/1.1" 200 91645
+2018-06-28 11:06:34,704 [Thread-1    ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5168
+2018-06-28 11:06:34,781 [Thread-4    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2018-06-28 11:06:34,786 [Thread-5    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2018-06-28 11:06:34,790 [Thread-3    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-06-28 11:06:34,791 [Thread-6    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+2018-06-28 11:06:34,811 [Thread-8    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2018-06-28 11:06:34,814 [Thread-7    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+2018-06-28 11:06:34,842 [Thread-10   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-06-28 11:06:34,843 [Thread-9    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+2018-06-28 11:06:34,847 [Thread-11   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2018-06-28 11:06:34,850 [Thread-12   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+2018-06-28 11:06:34,912 [Thread-13   ] [INFO ] [django.server       ]  "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2018-06-28 11:06:34,947 [Thread-14   ] [WARNI] [django.request      ]  Not Found: /favicon.ico
+2018-06-28 11:06:34,949 [Thread-14   ] [WARNI] [django.server       ]  "GET /favicon.ico HTTP/1.1" 404 3705
+2018-06-28 11:07:37,238 [Thread-1    ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5168
+2018-06-28 11:07:37,266 [Thread-5    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2018-06-28 11:07:37,272 [Thread-4    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2018-06-28 11:07:37,278 [Thread-3    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2018-06-28 11:07:37,280 [Thread-6    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+2018-06-28 11:07:37,285 [Thread-7    ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2018-06-28 11:07:37,285 [Thread-8    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2018-06-28 11:07:37,290 [Thread-9    ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2018-06-28 11:07:37,306 [Thread-10   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2018-06-28 11:07:37,310 [Thread-11   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2018-06-28 11:07:37,314 [Thread-12   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2018-06-28 11:07:37,358 [Thread-13   ] [INFO ] [django.server       ]  "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2018-06-28 11:08:09,750 [Thread-19   ] [WARNI] [django.request      ]  Not Found: /get_players/
+2018-06-28 11:08:09,753 [Thread-19   ] [WARNI] [django.server       ]  "GET /get_players/ HTTP/1.1" 404 3708
+2018-06-28 11:08:09,903 [Thread-18   ] [WARNI] [django.request      ]  Not Found: /favicon.ico
+2018-06-28 11:08:09,904 [Thread-18   ] [WARNI] [django.server       ]  "GET /favicon.ico HTTP/1.1" 404 3705
+2018-06-28 11:18:12,011 [Thread-7    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_details/2/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1318, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/local/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/usr/local/lib/python3.6/http/client.py", line 936, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/local/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/code/team_ms/team_app/views.py", line 45, in get_team_details
+    http_req.urlopen(MSUrls.player + 'get_team_players/' + str(current_team['id']) + '/').read()
+  File "/usr/local/lib/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 526, in open
+    response = self._open(req, data)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 544, in _open
+    '_open', req)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 504, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
+2018-06-28 11:18:12,125 [Thread-7    ] [ERROR] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 500 158608
+2018-06-28 11:18:17,691 [Thread-11   ] [ERROR] [django.request      ]  Internal Server Error: /get_team_details/2/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1318, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/local/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/usr/local/lib/python3.6/http/client.py", line 936, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/local/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/code/team_ms/team_app/views.py", line 45, in get_team_details
+    http_req.urlopen(MSUrls.player + 'get_team_players/' + str(current_team['id']) + '/').read()
+  File "/usr/local/lib/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 526, in open
+    response = self._open(req, data)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 544, in _open
+    '_open', req)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 504, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
+2018-06-28 11:18:17,769 [Thread-11   ] [ERROR] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 500 158608
+2018-06-28 11:18:22,823 [Thread-14   ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5168
+2018-06-28 11:18:22,856 [Thread-16   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2018-06-28 11:18:22,857 [Thread-17   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2018-06-28 11:18:22,863 [Thread-19   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+2018-06-28 11:18:22,864 [Thread-18   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+2018-06-28 11:18:22,865 [Thread-20   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2018-06-28 11:18:22,879 [Thread-21   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2018-06-28 11:18:22,882 [Thread-22   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+2018-06-28 11:18:22,883 [Thread-15   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-06-28 11:18:22,949 [Thread-23   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+2018-06-28 11:18:22,952 [Thread-24   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-06-28 11:18:23,015 [Thread-25   ] [INFO ] [django.server       ]  "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2018-06-28 11:18:31,102 [Thread-26   ] [INFO ] [django.server       ]  "GET /team/ HTTP/1.1" 200 9762
+2018-06-28 11:18:32,565 [Thread-27   ] [INFO ] [django.server       ]  "GET /media/argentinaflag_grande.gif HTTP/1.1" 200 8669
+2018-06-28 11:18:40,947 [Thread-31   ] [ERROR] [django.request      ]  Internal Server Error: /get_team_details/2/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1318, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/local/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/usr/local/lib/python3.6/http/client.py", line 936, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/local/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/code/team_ms/team_app/views.py", line 45, in get_team_details
+    http_req.urlopen(MSUrls.player + 'get_team_players/' + str(current_team['id']) + '/').read()
+  File "/usr/local/lib/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 526, in open
+    response = self._open(req, data)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 544, in _open
+    '_open', req)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 504, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
+2018-06-28 11:18:41,030 [Thread-31   ] [ERROR] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 500 158607
+2018-06-28 11:22:38,801 [Thread-34   ] [ERROR] [django.request      ]  Internal Server Error: /get_team_details/2/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1318, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/local/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/usr/local/lib/python3.6/http/client.py", line 936, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/local/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/code/team_ms/team_app/views.py", line 45, in get_team_details
+    http_req.urlopen(MSUrls.player + 'get_team_players/' + str(current_team['id']) + '/').read()
+  File "/usr/local/lib/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 526, in open
+    response = self._open(req, data)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 544, in _open
+    '_open', req)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 504, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
+2018-06-28 11:22:38,838 [Thread-34   ] [ERROR] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 500 15220
+2018-06-28 11:23:10,472 [Thread-35   ] [INFO ] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 200 605
+2018-06-28 11:24:11,100 [Thread-36   ] [INFO ] [django.server       ]  "POST /get_match_team/ HTTP/1.1" 200 605
+2018-06-28 11:26:19,599 [Thread-3    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_details/2/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1318, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/local/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/usr/local/lib/python3.6/http/client.py", line 936, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/local/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/code/team_ms/team_app/views.py", line 45, in get_team_details
+    http_req.urlopen(MSUrls.player + 'get_team_players/' + str(current_team['id']) + '/').read()
+  File "/usr/local/lib/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 526, in open
+    response = self._open(req, data)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 544, in _open
+    '_open', req)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 504, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
+2018-06-28 11:26:19,707 [Thread-3    ] [ERROR] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 500 158753
+2018-06-28 11:26:27,392 [Thread-8    ] [ERROR] [django.request      ]  Internal Server Error: /get_team_details/2/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1318, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/local/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/usr/local/lib/python3.6/http/client.py", line 936, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/local/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/code/team_ms/team_app/views.py", line 45, in get_team_details
+    http_req.urlopen(MSUrls.player + 'get_team_players/' + str(current_team['id']) + '/').read()
+  File "/usr/local/lib/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 526, in open
+    response = self._open(req, data)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 544, in _open
+    '_open', req)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 504, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/local/lib/python3.6/urllib/request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
+2018-06-28 11:26:27,454 [Thread-8    ] [ERROR] [django.server       ]  "GET /get_team_details/2/ HTTP/1.1" 500 157883
+2018-06-28 11:26:28,030 [Thread-9    ] [WARNI] [django.request      ]  Not Found: /favicon.ico
+2018-06-28 11:26:28,032 [Thread-9    ] [WARNI] [django.server       ]  "GET /favicon.ico HTTP/1.1" 404 3703
+2018-06-28 11:26:32,455 [Thread-11   ] [INFO ] [django.server       ]  "GET /team HTTP/1.1" 301 0
+2018-06-28 11:26:32,520 [Thread-10   ] [INFO ] [django.server       ]  "GET /team/ HTTP/1.1" 200 9750
+2018-06-28 11:26:32,551 [Thread-13   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2018-06-28 11:26:32,561 [Thread-12   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-06-28 11:26:32,564 [Thread-14   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2018-06-28 11:26:32,574 [Thread-15   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+2018-06-28 11:26:32,578 [Thread-16   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+2018-06-28 11:26:32,583 [Thread-17   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2018-06-28 11:26:32,592 [Thread-18   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-06-28 11:26:32,595 [Thread-19   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+2018-06-28 11:26:32,600 [Thread-21   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+2018-06-28 11:26:32,605 [Thread-20   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2018-06-28 11:26:32,622 [Thread-22   ] [INFO ] [django.server       ]  "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2018-06-28 11:26:42,452 [Thread-28   ] [INFO ] [django.server       ]  "GET /team/ HTTP/1.1" 200 9762
+2018-06-28 11:26:42,518 [Thread-24   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+2018-06-28 11:26:42,522 [Thread-26   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+2018-06-28 11:26:42,523 [Thread-25   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2018-06-28 11:26:42,524 [Thread-23   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2018-06-28 11:26:42,528 [Thread-29   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2018-06-28 11:26:42,541 [Thread-30   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+2018-06-28 11:26:42,548 [Thread-27   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-06-28 11:26:42,560 [Thread-31   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2018-06-28 11:26:42,567 [Thread-32   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-06-28 11:26:42,573 [Thread-33   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+2018-06-28 11:26:42,614 [Thread-34   ] [INFO ] [django.server       ]  "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2018-06-28 11:27:13,569 [Thread-36   ] [INFO ] [django.server       ]  "GET / HTTP/1.1" 200 5168
+2018-06-28 11:27:13,651 [Thread-39   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2018-06-28 11:27:13,665 [Thread-37   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2018-06-28 11:27:13,671 [Thread-38   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2018-06-28 11:27:13,691 [Thread-35   ] [INFO ] [django.server       ]  "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2018-06-28 11:27:13,697 [Thread-40   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+2018-06-28 11:27:13,698 [Thread-41   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2018-06-28 11:27:13,701 [Thread-42   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2018-06-28 11:27:13,708 [Thread-43   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2018-06-28 11:27:13,709 [Thread-44   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2018-06-28 11:27:13,724 [Thread-45   ] [INFO ] [django.server       ]  "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2018-06-28 11:27:13,774 [Thread-46   ] [INFO ] [django.server       ]  "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0

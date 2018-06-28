@@ -230,7 +230,7 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.3287037" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="10" sideWeight="0.49923196" visible="true" weight="0.47685185" />
+      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.49923196" weight="0.47685185" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49923196" weight="0.52160496" />
       <window_info id="Favorites" order="2" side_tool="true" />
