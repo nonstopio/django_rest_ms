@@ -8,8 +8,7 @@ Microservices - also known as the microservice architecture - is an architectura
 
 ## Docker
 
-- Create services: `docker-compose run player_web . ` (Player_web depends on team_web and match_web. So, all services will be created)
-- Run services: `docker-compose up` (To run in background append with `-d`)
+- Create/Run services: `docker-compose up` (To run in background append with `-d`)
 - Stop services (Gracefully): `docker-compose down`
 
 ## How to configure? (FOR DOCKERLESS PEOPLE)
