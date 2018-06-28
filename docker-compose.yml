@@ -24,6 +24,3 @@ services:
       - .:/code
     ports:
       - "7002:7002"
-    depends_on:
-      - match_web
-      - team_web
