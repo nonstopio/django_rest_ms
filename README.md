@@ -9,7 +9,7 @@ Microservices - also known as the microservice architecture - is an architectura
 ## Docker
 
 - Create/Run services: `docker-compose up` (To run in background append with `-d`)
-- Stop services (Gracefully): `docker-compose down`
+- Stop services (Gracefully): `docker-compose down` or `CTRL-C`
 
 ## How to configure? (FOR DOCKERLESS PEOPLE)
   - Run below command:
