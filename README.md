@@ -32,3 +32,10 @@ This application has mainly three modules Team, Player and Match where every mod
 - *Get all match*
   - API: http://127.0.0.1:7003/get_all_match/
   - This api fetches list of all the matches in the WorldCup. But, every match has two teams which again reside in Team Ms. So we call have called Team MS api from Match MS: `http://127.0.0.1:7001/get_match_team/`
+
+
+# Docker
+
+- Create services: `docker-compose run player_web . ` (Player_web depends on team_web and match_web. So, all services will be created)
+- Run services: `docker-compose up` (To run in background append with `-d`)
+- Stop services (Gracefully): `docker-compose down`
