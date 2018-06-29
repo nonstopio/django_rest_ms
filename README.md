@@ -15,11 +15,11 @@ Microservices - also known as the microservice architecture - is an architectura
   - Run below command:
     - `git clone https://github.com/nonstopio/django_rest_ms.git`
     - `cd django_rest_ms`
-    - `./zero_config.bash`
+    - `./zero_config.bash <your local ip address>`
   - There you go. Everything is set. Refer following URLs for respective MS:
-    - Team MS: http://127.0.0.1:7001/
-    - Player MS: http://127.0.0.1:7002/
-    - Match MS: http://127.0.0.1:7003/
+    - Team MS: `http://<your local ip address>:7001/`
+    - Player MS: `http://<your local ip address>:7002/`
+    - Match MS: `http://<your local ip address>:7003/`
 
 **NOTE: These servers will run in background so to stop the servers run: `pkill -f manage.py`**
 
@@ -27,13 +27,13 @@ Microservices - also known as the microservice architecture - is an architectura
 This application has mainly three modules Team, Player and Match where every module is an MS. All modules are related to each other like, a team has list of players, every player has a team assigned to him/her, every match has two teams.
 
 - *Get team details*
-  - API: http://127.0.0.1:7001/get_team_details/2/
-  - This api fetches the details about the team and list of players in that team. But, players' data reside in Player MS. So api for list of players is called `http://127.0.0.1:7002/get_team_players/1/`
+  - API: `http://<your local ip address>:7001/get_team_details/2/`
+  - This api fetches the details about the team and list of players in that team. But, players' data reside in Player MS. So api for list of players is called `http://<your local ip address>:7002/get_team_players/1/`
   
 - *Get all players*
-  - API: http://127.0.0.1:7002/get_players/
-  - This api fetched the list of all the players in the WorldCup. But, every player is assigned a team and the team's data resides in Team MS. So, we call the Team MS api from Player MS: `http://127.0.0.1:7001/get_player_team/`
+  - API: `http://<your local ip address>:7002/get_players/`
+  - This api fetched the list of all the players in the WorldCup. But, every player is assigned a team and the team's data resides in Team MS. So, we call the Team MS api from Player MS: `http://<your local ip address>:7001/get_player_team/`
 
 - *Get all match*
-  - API: http://127.0.0.1:7003/get_all_match/
-  - This api fetches list of all the matches in the WorldCup. But, every match has two teams which again reside in Team Ms. So we call have called Team MS api from Match MS: `http://127.0.0.1:7001/get_match_team/`
+  - API: `http://<your local ip address>:7003/get_all_match/`
+  - This api fetches list of all the matches in the WorldCup. But, every match has two teams which again reside in Team Ms. So we call have called Team MS api from Match MS: `http://<your local ip address>:7001/get_match_team/`
