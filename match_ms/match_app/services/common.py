@@ -1,2 +1,2 @@
 class MSUrls:
-    team = 'http://127.0.0.1:7001/'
+    team = 'http://192.168.1.8:7001/'

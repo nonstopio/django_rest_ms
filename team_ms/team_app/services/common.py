@@ -1,3 +1,3 @@
 class MSUrls:
-    team = 'http://127.0.0.1:7001/'
-    player = 'http://127.0.0.1:7002/'
+    team = 'http://192.168.1.8:7001/'
+    player = 'http://192.168.1.8:7002/'
