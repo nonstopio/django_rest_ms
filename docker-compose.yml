@@ -3,13 +3,13 @@ version: '3'
 services:
   db:
     image: postgres:alpine
-  team_ms_web:
+  match_ms_web:
     build: .
-    # image: arnoldnonstop/team_microservice:latest
-    command: bash -c "python3 manage.py makemigrations & python3 manage.py migrate & python3 manage.py runserver 0.0.0.0:7003"
+    # image: arnoldnonstop/match_microservice:latest
+    command: bash -c "python3 manage.py makemigrations & python3 manage.py migrate & python3 manage.py runserver 0.0.0.0:7002"
     volumes:
       - .:/code
     ports:
-      - "7003:7003"
+      - "7002:7002"
     depends_on:
       - db
