@@ -5,25 +5,25 @@ services:
     image: postgres:alpine
   
   match_web:
-    build: .
-    command: bash -c "python3 match_ms/manage.py makemigrations & python3 match_ms/manage.py migrate & python3 match_ms/manage.py runserver 0.0.0.0:7003"
-    volumes:
-      - .:/code
+    image: arnoldnonstop/match_microservice
+    command: bash -c "python3 manage.py makemigrations & python3 manage.py migrate & python3 manage.py runserver 0.0.0.0:7003"
+    # volumes:
+    #   - .:/code
     ports:
       - "7003:7003"
 
   team_web:
-    build: .
-    command: bash -c "python3 team_ms/manage.py makemigrations & python3 team_ms/manage.py migrate & python3 team_ms/manage.py runserver 0.0.0.0:7001"
-    volumes:
-      - .:/code
+    image: arnoldnonstop/team_microservice
+    command: bash -c "python3 manage.py makemigrations & python3 manage.py migrate & python3 manage.py runserver 0.0.0.0:7001"
+    # volumes:
+    #   - .:/code
     ports:
       - "7001:7001"
 
   player_web:
-    build: .
-    command: bash -c "python3 player_ms/manage.py makemigrations & python3 player_ms/manage.py migrate & python3 player_ms/manage.py runserver 0.0.0.0:7002"
-    volumes:
-      - .:/code
+    image: arnoldnonstop/player_microservice
+    command: bash -c "python3 manage.py makemigrations & python3 manage.py migrate & python3 manage.py runserver 0.0.0.0:7002"
+    # volumes:
+    #   - .:/code
     ports:
       - "7002:7002"
